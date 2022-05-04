@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: (github.event_name == 'push') || contains(github.head_ref, 'branch-name/') || (github.event_name == 'workflow_dispatch')
     - name: Install & build
       run: |
         echo "Deploy code..."
